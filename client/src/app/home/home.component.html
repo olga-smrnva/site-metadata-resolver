@@ -1,0 +1,19 @@
+<div class="card text-center m-3">
+	<h3 class="card-header">Site metadata resolver</h3>
+	<div class="card-body text-left">
+		<div class="info-container">
+			<div>
+				<form (ngSubmit)="onSubmit(url)"> 
+					<input id="url" name="url" [(ngModel)]="url" type="text" placeholder="Enter URL here:">
+					<input class="button" type="submit" value="Get details">
+				</form>
+			</div>
+			<div class="metadata-output" *ngFor="let item of data">
+				<p>Title: {{item.title}}</p>
+				<p>URL: {{item.url}}</p> 
+				<p>Image: <span *ngIf="!item.image && item.url">There's no image on this website</span></p>
+				<img *ngIf="item.image" [src]="item.image">  
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+form {
+	display: flex;
+	justify-content: space-between;  
+}
+
+input {
+	border: 2px black solid;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	width: 20%;
+	height: auto;
+}
+
+.info-container {
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+}
+
+.metadata-output {
+	border: 2px black solid;
+	margin: 20px 0;
+	padding: 10px;
+	height: 200px;
+	overflow: auto;
+}
+
+.button {
+	box-shadow: 3px 3px 3px #000
+}
+
+#url {
+	width: 70%;
+}
