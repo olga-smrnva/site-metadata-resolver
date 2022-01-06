@@ -30,7 +30,7 @@ module.exports = {
 
         // workaround for warning: Critical dependency: the request of a dependency is an expression
         new webpack.ContextReplacementPlugin(
-            /\@angular(\\|\/)core(\\|\/)fesm5/,
+            /\@angular(\\|\/)core(\\|\/)fesm2015/,
             path.resolve(__dirname, 'src')
         )
     ],
@@ -40,5 +40,7 @@ module.exports = {
                 target: 'http://localhost:8080'
             }
         }
-    }
+    },
+
+    devtool: 'inline-cheap-module-source-map'
 }
